@@ -14,7 +14,6 @@ import { Component } from '@angular/core';
       color : green;
     }
     .text-special {
-      color : "lightblue"
       font-style : italic;
     }
 
