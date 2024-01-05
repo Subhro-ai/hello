@@ -9,6 +9,7 @@ import { Component } from '@angular/core';
 })
 export class Test1Component {
   public name = "";
+  public a = 0;
   logMessage (value: any) {
     console.log(value);
   }
