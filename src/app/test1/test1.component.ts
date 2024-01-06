@@ -9,6 +9,7 @@ import { Component } from '@angular/core';
               <div *ngSwitchCase="'red'">RED</div>
               <div *ngSwitchCase="'blue'">BLUE</div>
               <div *ngSwitchCase="'green'">GREEN</div>
+              <div *ngSwitchDefault>Pick again!</div>
               </div>
 `,
   styles: []
