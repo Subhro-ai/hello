@@ -1,17 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-test1',
   template: `
-            <div *ngFor="let color of colors; index as i">
-            <h2> {{i+1}}. {{color}}</h2>
-            </div>
+            
+            <h2> {{parentData}} </h2>
+            
               
 `,
   styles: []
 })
 export class Test1Component {
-  public colors = ['red', 'green', 'blue', 'yellow'];
+  @Input() public parentData: any;
 }
 
   
