@@ -9,6 +9,9 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
             <h2> {{name | uppercase}} </h2>
             <h2> {{name | titlecase}} </h2>
             <h2> {{name | slice:3:5}} </h2>
+            <h2> {{5.12 | number :'1.2-3'}} </h2>
+            <h2> {{5.12 | number :'2.4-5'}} </h2>
+            <h2> {{5.12 | number :'3.4-6'}} </h2>
               
 `,
   styles: []
