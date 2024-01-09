@@ -4,20 +4,17 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   selector: 'app-test1',
   template: `
             
-            <h2> {{"Hello " + name}} </h2>
-            <button (click)="fireEvent()">Click</button>
+            <h2> {{name}} </h2>
+            <h2> {{name | lowercase}} </h2>
+            <h2> {{name | uppercase}} </h2>
+            <h2> {{name | titlecase}} </h2>
+            <h2> {{name | slice:3:5}} </h2>
               
 `,
   styles: []
 })
 export class Test1Component {
-  @Input('parentData') public name: any;
-
-  @Output() public childEvent = new EventEmitter();
-
-  fireEvent() {
-    this.childEvent.emit('Hey Subhro');
-  }
+  public name = "Bruce wayne";
 }
 
   
