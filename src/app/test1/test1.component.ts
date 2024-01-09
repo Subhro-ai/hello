@@ -4,14 +4,14 @@ import { Component, Input } from '@angular/core';
   selector: 'app-test1',
   template: `
             
-            <h2> {{parentData}} </h2>
+            <h2> {{name}} </h2>
             
               
 `,
   styles: []
 })
 export class Test1Component {
-  @Input() public parentData: any;
+  @Input('parentData') public name: any;
 }
 
   
