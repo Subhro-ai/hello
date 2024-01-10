@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { EmployeeService } from '../employee.service';
 
 @Component({
   selector: 'app-test1',
@@ -13,12 +14,13 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styles: []
 })
 export class Test1Component {
-  public employees = [
-    {"id": 1, "name": "Bruce", "age" : 19},
-    {"id": 2, "name": "Andrew", "age" : 29},
-    {"id": 3, "name": "Kylie", "age" : 39},
-    {"id": 4, "name": "Selina", "age" : 49}
-  ]
+  public employees: any;
+
+  constructor(private _employeeService: EmployeeService) {}
+
+  ngOnInit() {
+    this.employees = this._employeeService.getEmployees();
+  }
 }
 
   

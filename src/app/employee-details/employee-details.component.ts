@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { EmployeeService } from '../employee.service';
 
 @Component({
   selector: 'app-employee-details',
@@ -11,5 +12,11 @@ import { Component } from '@angular/core';
   styleUrl: './employee-details.component.css'
 })
 export class EmployeeDetailsComponent {
+  public employees:any;
 
+  constructor (private _employeeService : EmployeeService) {}
+
+  ngOnInit() {
+    this.employees = this._employeeService.getEmployees();
+  }
 }
